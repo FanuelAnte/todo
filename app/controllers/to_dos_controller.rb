@@ -65,6 +65,6 @@ class ToDosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def to_do_params
-      params.require(:to_do).permit(:task, :isComplete)
+      params.require(:payload).permit(:task, :isComplete)
     end
 end

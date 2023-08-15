@@ -1,24 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe "/to_dos", type: :request do
-  include_examples('request_shared_spec', 'to_dos', 5)
+  include_examples("request_shared_spec", "to_dos", 5)
 
   let(:valid_attributes) do
-  {
-    to_do: {
+    {
       task: Faker::Lorem.sentence(word_count: 5),
       isComplete: true
     }
-  }
   end
 
   let(:invalid_attributes) do
-  {
-    to_do: {
+    {
       task: Faker::Lorem.sentence(word_count: 5),
       isComplete: nil
     }
-  }
   end
 
   let(:new_attributes) do
